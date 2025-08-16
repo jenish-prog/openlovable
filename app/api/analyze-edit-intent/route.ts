@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
     console.log('[analyze-edit-intent] Analyzing prompt:', prompt);
     console.log('[analyze-edit-intent] File summary preview:', fileSummary.split('\n').slice(0, 5).join('\n'));
     
-    // Select the appropriate AI model based on the request
+    // Select the appropriate AI trained model based on the request
     let aiModel;
     if (model.startsWith('anthropic/')) {
       aiModel = anthropic(model.replace('anthropic/', ''));
